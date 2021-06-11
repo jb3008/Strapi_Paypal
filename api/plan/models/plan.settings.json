@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plans",
+  "info": {
+    "name": "plan",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "interval_count": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "fixed_price": {
+      "type": "decimal",
+      "required": true
+    },
+    "taxes": {
+      "type": "integer",
+      "required": true
+    },
+    "product_id": {
+      "model": "product",
+      "via": "plan_product_id"
+    },
+    "paypalPlanId": {
+      "type": "string"
+    },
+    "PlanId": {
+      "type": "string"
+    }
+  }
+}

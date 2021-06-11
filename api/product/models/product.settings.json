@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "image_url": {
+      "type": "string",
+      "required": true
+    },
+    "home_url": {
+      "type": "string",
+      "required": true
+    },
+    "ProductId": {
+      "type": "string"
+    },
+    "PaypalProductId": {
+      "type": "string",
+      "private": true
+    },
+    "plan_product_id": {
+      "via": "product_id",
+      "model": "plan"
+    }
+  }
+}
